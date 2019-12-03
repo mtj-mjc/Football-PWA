@@ -13,7 +13,7 @@ async function fetchCompetitions() {
                 // Create Card for Competition
                 let piece = `
                     <div class="card col-10 col-md-3 mx-2 mb-3" style="height: 25rem;">
-                        <img src="../images/${competition.code}.svg" class="card-img-top" height="60%"/>
+                        <img src="../images/${competition.code}.svg" alt="${competition.name}" class="card-img-top" height="60%"/>
                         <div class="card-body">
                             <h5>${competition.name}</h5>
                             <p class="card-text">${competition.area.name}</p>
