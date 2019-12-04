@@ -1,2 +1,7 @@
 football-app-template/node_modules/
 football-app-template/package-lock.json
+football-app-pwa/node_modules/
+football-app-pwa/package-lock.json
+football-app-pwa-workbox/node_modules/
+football-app-pwa-workbox/package-lock.json
+football-app-pwa-workbox/build/

@@ -28,3 +28,5 @@ https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle
 https://developers.google.com/web/fundamentals/app-install-banners/#criteria
 
 https://codelabs.developers.google.com/codelabs/push-notifications/index.html#3
+
+https://www.goodbarber.com/blog/progressive-web-apps-browser-support-compatibility-a883/

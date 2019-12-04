@@ -1,0 +1,33 @@
+{
+  "name": "2019-sa14-progressive-web-apps",
+  "version": "1.0.0",
+  "description": "Demo for simple PWA",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "copy": "copyfiles -u 1 app/**/**/* app/**/* app/* build",
+    "build": "npm run copy && workbox injectManifest workbox-config.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "copyfiles": "^2.1.1",
+    "express": "^4.16.4",
+    "express-http-to-https": "^1.1.4",
+    "lodash": "^4.17.15",
+    "node-fetch": "^2.3.0",
+    "workbox-cli": "^4.3.1"
+  },
+  "engines": {
+    "node": "10.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.enterpriselab.ch/moblab/2019-sa14-progressive-web-apps.git"
+  },
+  "license": "Apache2",
+  "keywords": [
+    "progressive-web-app",
+    "pwa",
+    "installable web app"
+  ]
+}

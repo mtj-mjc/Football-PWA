@@ -6,19 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/css/bootstrap-4.4.1.min.css">
-    <!-- Manifest -->
-    <link rel="manifest" href="/manifest.json">
-    <!-- Add iOS meta tags and icons -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Weather PWA">
-    <link rel="apple-touch-icon" href="/images/icons/football-128-128.png">
     <!-- Favicon -->
     <link rel="icon" href="/images/icons/favicon.ico" type="image/x-icon" />
-
+    <link rel="manifest" href="/manifest.json">
+    
     <title>PWA - Football App</title>
     <meta name="Description" content="Demo PWA">
-    <meta name="theme-color" content="#2F3BA2" />
 </head>
 
 <body>
@@ -30,20 +23,16 @@
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-item nav-link active" href="/">Competitions <span class="sr-only">(current)</span></a>
                 <button id="butInstall" class="btn btn-outline-secondary " hidden>Download App<img
-                        src="/images/icons/download.svg" width="32" height="32" title="Download App"></button>
+                    src="/images/icons/download.svg" width="32" height="32" title="Download App"></button>
             </div>
         </div>
     </nav>
 
     <br />
-
-    <!-- Timestamp of Data Competiton in Hidden Element -->
-    <div class="competitions-last-updated" hidden></div>
 
     <!-- List of available Competitions, gets filled during RunTime -->
     <div id="competitions" class="row justify-content-center">
@@ -60,20 +49,22 @@
 
     <!-- Add Script -->
     <script src="scripts/app.js"></script>
-    <script src="/scripts/install.js"></script>
+    <script src="scripts/install.js"></script>
 
-    <!-- Register Service Worker -->
+    <!-- Register ServiceWorker -->
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/service-worker.js')
-                    .then((reg) => {
-                        console.log('Service worker registered.', reg);
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log(`Service Worker registered! Scope: ${registration.scope}`);
+                    })
+                    .catch(err => {
+                        console.log(`Service Worker registration failed: ${err}`);
                     });
             });
         }
     </script>
-
 </body>
 
 </html>
