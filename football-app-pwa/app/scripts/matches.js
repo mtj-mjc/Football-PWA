@@ -46,7 +46,7 @@ function renderCompetition(competition) {
     if (competition != null) {
         let content =
             `
-                <h3 class="ml-3">
+                <h3 class="ml-3 text-truncate">
                     <img src="../images/${competition.code}.svg" alt="${competition.name}" width="75px" class="mr-2"/>
                     ${competition.name}
                 </h1>
@@ -55,6 +55,11 @@ function renderCompetition(competition) {
     }
 }
 
+/**
+ * Create a list entry for every Match
+ * 
+ * @param {Object} data Matches of a Competition
+ */
 function renderMatches(data) {
     try {
         // If the data on the element is newer, skip the update.

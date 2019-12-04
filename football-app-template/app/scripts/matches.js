@@ -1,13 +1,47 @@
 /**
- * Get's all Matches of a Competition
+ * Get's all Matches of a Competition via Network
  *
  * @param {string} id Competition ID.
  */
-async function fetchMatches(id) {
+async function getMatchesFromNetwork(id) {
+    // Get Matches of a Competition
+    return await fetch(`/competitions/${id}/matches`)
+        .then(response => response.json())
+        .catch((e) => {
+            console.info('Could not fetch matches from Network', e);
+            return null;
+        });
+}
+
+/**
+ * Create Title with Competition Information
+ * 
+ * @param {Object} competition Competition Information
+ */
+function renderCompetition(competition) {
+    if (competition != null) {
+        let content =
+            `
+                <h3 class="ml-3 text-truncate">
+                    <img src="../images/${competition.code}.svg" alt="${competition.name}" width="75px" class="mr-2"/>
+                    ${competition.name}
+                </h1>
+            `;
+        document.getElementById('competition').innerHTML = content;
+    }
+}
+
+/**
+ * Create a list entry for every Match
+ * 
+ * @param {Object} data Matches of a Competition
+ */
+function renderMatches(data) {
     try {
-        // Get all Matches of the Competition
-        const result = await fetch(`/competitions/${id}/matches`).then(response => response.json());
-        const matches = result.matches;
+        // Render Titile with Competition Information
+        renderCompetition(data.competition);
+
+        const matches = data.matches;
         // Is needed so we can differantiate between Group Stage and other Stages e.g Round of 16, Semi-final, etc.
         const groupStage = 'GROUP_STAGE';
         let content = '<ul class="list-group col-10" >';
@@ -56,8 +90,27 @@ async function fetchMatches(id) {
     }
 }
 
-// Get Parameter Competition ID from URL
-var url_string = window.location.href;
-var url = new URL(url_string);
-var id = url.searchParams.get("id");
-fetchMatches(id);
+/**
+ * Updates Data on the UI
+ */
+async function updateData() {
+    // Get Parameter Competition ID from URL
+    var url_string = window.location.href;
+    var url = new URL(url_string);
+    var id = url.searchParams.get("id");
+
+    // Get data from Network
+    var resultFromNetwork = getMatchesFromNetwork(id)
+        .then((matches) => {
+            if (matches != null) {
+                renderMatches(matches);
+                return true;
+            }
+            else {
+                return false;
+            }
+        });
+}
+
+
+updateData();
