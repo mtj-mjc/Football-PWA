@@ -1,9 +1,28 @@
 # 2019-sa14-progressive-web-apps
 
 ## Getting Started
+Damit das Projekt gestartet werden kann wird npm benötigt.
+Man kann es hier herunterladen https://nodejs.org/de/download/.
 
+### Football Webseite
 
-### Problems
+``` cd football-website ```
+``` npm install ```
+``` npm start ```
+
+### Football PWA
+
+``` cd football-pwa ```
+``` npm install ```
+``` npm start ```
+
+### Football PWA with Workbox
+
+``` cd football-pwa-workbox ```
+``` npm install ```
+``` npm start ```
+
+## Possible Problems
 
 ``` Error: Cannot find module 'accepts/node_modules/negotiator' ```
 
@@ -12,25 +31,9 @@ Um diesen Fehler zu beheben muss man den node_modules Ordner löschen und nochma
     1. ``` rm -r node_modules ``` (sicherstellen das der Ordner node_modules gelöscht ist)
     2. ``` npm install ```
 
-
-https://stackoverflow.com/questions/57673913/vsc-powershell-after-npm-updating-packages-ps1-cannot-be-loaded-because-runnin
-
-https://debuggerdotbreak.judahgabriel.com/2018/04/13/i-built-a-pwa-and-published-it-in-3-app-stores-heres-what-i-learned/
-
-https://medium.com/the-web-tub/build-a-pwa-using-workbox-2eda1ef51d88
-
-https://developers.google.com/web/fundamentals/architecture/app-shell
-
-https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/
-
-https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle
-
-https://developers.google.com/web/fundamentals/app-install-banners/#criteria
-
-https://codelabs.developers.google.com/codelabs/push-notifications/index.html#3
-
-https://www.goodbarber.com/blog/progressive-web-apps-browser-support-compatibility-a883/
-
-https://www.nau.ch/news/digital/microsoft-macht-outlook-zur-progressive-web-app-65620260
-
-https://whatwebcando.today/
+``` 
+    + CategoryInfo          : SecurityError: (:) [], PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+```
+Diesr Fehler kommt von PowerShell und meldet eine Security Exception. Um das Problem zu beheben muss man folgenden Code ausführen im Terminal
+``` Set-ExecutionPolicy RemoteSigned ```
