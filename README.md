@@ -6,9 +6,10 @@ Man kann es hier herunterladen https://nodejs.org/de/download/.
 
 ### Football Webseite
 
-``` cd football-website ```
-``` npm install ```
-``` npm start ```
+``` cd football-website
+    npm install 
+    npm start 
+```
 
 ### Football PWA
 
