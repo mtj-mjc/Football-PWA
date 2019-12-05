@@ -29,6 +29,7 @@ Man kann es hier herunterladen https://nodejs.org/de/download/.
 ```
 ## Possible Problems
 
+### Node.js Fehler
 ``` Error: Cannot find module 'accepts/node_modules/negotiator' ```
 
 Dieser Error ist ein Bug von npm. Das Problem ist, dass er ab und zu die Module der Dependencies nicht installiert.
@@ -36,9 +37,10 @@ Um diesen Fehler zu beheben muss man den node_modules Ordner löschen und nochma
     1. ``` rm -r node_modules ``` (sicherstellen das der Ordner node_modules gelöscht ist)
     2. ``` npm install ```
 
+### Powershell Error
 ``` 
     + CategoryInfo          : SecurityError: (:) [], PSSecurityException
     + FullyQualifiedErrorId : UnauthorizedAccess
 ```
-Diesr Fehler kommt von PowerShell und meldet eine Security Exception. Um das Problem zu beheben muss man folgenden Code ausführen im Terminal
+Diesr Fehler kommt von PowerShell und meldet eine Security Exception. Um das Problem zu beheben muss man folgenden Code im Terminal ausführen
 ``` Set-ExecutionPolicy RemoteSigned ```
