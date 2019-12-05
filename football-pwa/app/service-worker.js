@@ -11,6 +11,7 @@ const FILES_TO_CACHE = [
     '/manifest.json',
     '/scripts/app.js',
     '/scripts/matches.js',
+    '/scripts/install.js',
     '/scripts/libs/bootstrap-4.0.0.min.js',
     '/scripts/libs/jquery-3.2.1.slim.min.js',
     '/pages/matches.html',
