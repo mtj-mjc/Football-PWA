@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap-4.4.1.min.css">
+    <!-- Favicon -->
+    <link rel="icon" href="/images/icons/favicon.ico" type="image/x-icon" />
+
+    <title>Football Website</title>
+    <meta name="Description" content="Football Website">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">Football Website</a>
+        <!-- Hamburger -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="/">Competitions</a>
+            </div>
+        </div>
+    </nav>
+
+    <br />
+
+    <!-- Competition Information Title -->
+    <div id="competition"></div>
+
+    <!-- List of Matches, gets filled during RunTime -->
+    <div id="matches" class="row justify-content-center"></div>
+
+    <!-- Add Bootstrap, jQuery -> it is needed for the Navigation bar -->
+    <script src="../scripts/libs/jquery-3.2.1.slim.min.js"></script>
+    <script src="../scripts/libs/bootstrap-4.0.0.min.js"></script>
+
+    <!-- Add Script -->
+    <script src="../scripts/matches.js"></script>
+</body>
+
+</html>

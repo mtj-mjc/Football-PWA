@@ -30,3 +30,7 @@ https://developers.google.com/web/fundamentals/app-install-banners/#criteria
 https://codelabs.developers.google.com/codelabs/push-notifications/index.html#3
 
 https://www.goodbarber.com/blog/progressive-web-apps-browser-support-compatibility-a883/
+
+https://www.nau.ch/news/digital/microsoft-macht-outlook-zur-progressive-web-app-65620260
+
+https://whatwebcando.today/
