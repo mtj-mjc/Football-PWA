@@ -6,23 +6,27 @@ Man kann es hier herunterladen https://nodejs.org/de/download/.
 
 ### Football Webseite
 
-``` cd football-website
+``` bash
+    cd football-website
     npm install 
     npm start 
 ```
 
 ### Football PWA
 
-``` cd football-pwa ```
-``` npm install ```
-``` npm start ```
+``` bash
+    cd football-pwa
+    npm install
+    npm start 
+```
 
 ### Football PWA with Workbox
 
-``` cd football-pwa-workbox ```
-``` npm install ```
-``` npm start ```
-
+``` bash
+    cd football-pwa-workbox
+    npm install
+    npm start 
+```
 ## Possible Problems
 
 ``` Error: Cannot find module 'accepts/node_modules/negotiator' ```
