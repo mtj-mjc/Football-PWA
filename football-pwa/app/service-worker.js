@@ -34,6 +34,7 @@ const FILES_TO_CACHE = [
     '/images/icons/football-128x128.png',
     '/images/icons/football-256x256.png',
     '/images/icons/football-512x512.png',
+    '/images/icons/download.svg',
     `/css/bootstrap-4.4.1.min.css`
 ];
 
